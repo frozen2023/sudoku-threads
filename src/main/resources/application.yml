@@ -1,0 +1,12 @@
+server:
+  port: 9000
+
+spring:
+  task:
+    execution:
+      pool:
+        core-size: 9
+        max-size: 20
+        keep-alive: 60000
+        queue-capacity: 256
+      thread-name-prefix: create_sudoku
