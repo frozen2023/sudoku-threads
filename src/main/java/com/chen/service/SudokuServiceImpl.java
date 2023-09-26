@@ -20,6 +20,8 @@ public class SudokuServiceImpl implements SudokuService{
 
     @Override
     public CommonResult generateSudokuByThreads(int level) {
+        // 清理缓存
+        this.sudokus.clear();
         /* 线程安全 */
         synchronized (this.sudokus) {
             for (int i = 0; i < 9; i ++) {
