@@ -6,26 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5d3e302a-984a-4fd7-8e43-b976e86e82a9" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/chen/service/SudokuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chen/service/SudokuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/app.9fcbd46c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/开始.1be00424.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/数独游戏.a71ea632.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.7800182e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.7800182e.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.60661c0c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.60661c0c.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/app.9fcbd46c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.7800182e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.7800182e.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/sudoku-threads-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/sudoku-threads-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.chen.SudokuThreadsApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.chen.SudokuThreadsApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.chen.SudokuThreadsApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.chen.SudokuThreadsApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.d089b45d.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.d089b45d.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chen/SudokuThreadsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chen/SudokuThreadsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.d089b45d.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/app.d089b45d.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -116,6 +99,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SudokuServiceTest.testGenerateSudoku" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sudoku-threads" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chen.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chen.service" />
+      <option name="MAIN_CLASS_NAME" value="com.chen.service.SudokuServiceTest" />
+      <option name="METHOD_NAME" value="testGenerateSudoku" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SudokuThreadsApplicationTests.testGenerateSudoku" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sudoku-threads" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chen" />
+      <option name="MAIN_CLASS_NAME" value="com.chen.SudokuThreadsApplicationTests" />
+      <option name="METHOD_NAME" value="testGenerateSudoku" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SudokuThreadsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="sudoku-threads" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.chen.SudokuThreadsApplication" />
@@ -125,6 +140,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SudokuThreadsApplicationTests.testGenerateSudoku" />
+        <item itemvalue="JUnit.SudokuServiceTest.testGenerateSudoku" />
         <item itemvalue="应用程序.Sudoku" />
       </list>
     </recent_temporary>
@@ -149,7 +166,7 @@
       <workItem from="1695639257291" duration="1844000" />
       <workItem from="1695649671060" duration="897000" />
       <workItem from="1695656415247" duration="2787000" />
-      <workItem from="1695703584367" duration="2719000" />
+      <workItem from="1695703584367" duration="5354000" />
     </task>
     <servers />
   </component>
