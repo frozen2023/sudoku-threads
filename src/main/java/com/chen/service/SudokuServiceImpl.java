@@ -17,7 +17,6 @@ public class SudokuServiceImpl implements SudokuService{
 
     @Override
     public CommonResult generateSudokuByThreads(int level) {
-        // 清理缓存
         List<Sudoku> sudokus = new ArrayList<>(9);
         /* 线程安全 */
         synchronized (sudokus) {
