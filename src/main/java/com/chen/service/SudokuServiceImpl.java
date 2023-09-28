@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
+import java.util.stream.Collectors;
 
 @Service
 public class SudokuServiceImpl implements SudokuService{
@@ -17,20 +18,24 @@ public class SudokuServiceImpl implements SudokuService{
 
     @Override
     public CommonResult generateSudokuByThreads(int level) {
-        List<Sudoku> sudokus = new ArrayList<>(9);
+        List<Future<Sudoku>> futures = new ArrayList<>(9);
         /* 线程安全 */
-        synchronized (sudokus) {
+        synchronized (futures) {
             for (int i = 0; i < 9; i ++) {
                 Future<Sudoku> future = generator.createSudoku(level);
-                try {
-                    sudokus.add(future.get());
-                } catch (InterruptedException | ExecutionException e) {
-                    return CommonResult.error("多线程获取数独失败");
-                }
+                futures.add(future);
             }
         }
 
-        if (sudokus.size() < 9) {
+        List<Sudoku> sudokus = futures.stream().map(sudokuFuture -> {
+            try {
+                return sudokuFuture.get();
+            } catch (InterruptedException | ExecutionException e) {
+                throw new RuntimeException(e);
+            }
+        }).collect(Collectors.toList());
+
+        if (futures.size() < 9) {
             return CommonResult.error();
         }
         return CommonResult.success(sudokus);

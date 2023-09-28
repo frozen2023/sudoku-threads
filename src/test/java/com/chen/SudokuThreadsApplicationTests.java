@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
@@ -31,7 +32,7 @@ class SudokuThreadsApplicationTests {
     }
 
     @Test
-    void contextLoads() {
+    void contextLoads() throws InterruptedException {
     }
 
 }
