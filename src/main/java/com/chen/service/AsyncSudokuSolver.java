@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.concurrent.Future;
 
+/**
+ * @author 20956
+ */
 @Component
 @Slf4j
 public class AsyncSudokuSolver {
@@ -22,7 +25,7 @@ public class AsyncSudokuSolver {
         // 块的1-9
         boolean[][] blocks = new boolean[9][9];
 
-        int[][] result = Arrays.copyOf(arrayToBeSolved, 9);
+        int[][] result = deepCopy(arrayToBeSolved);
 
         // 初始化数组
         initBooleanArray(cols, false);
@@ -88,6 +91,15 @@ public class AsyncSudokuSolver {
         for (boolean[] booleans : arr) {
             Arrays.fill(booleans, with);
         }
+    }
+
+    // Arrays.copyOf()实现深拷贝
+    public int[][] deepCopy(int[][] sourceArray) {
+        int[][] result = new int[sourceArray.length][];
+        for (int i = 0; i < sourceArray.length; i++) {
+            result[i] = Arrays.copyOf(sourceArray[i], sourceArray[i].length);
+        }
+        return result;
     }
 
 }

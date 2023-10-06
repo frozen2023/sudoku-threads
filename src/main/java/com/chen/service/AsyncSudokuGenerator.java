@@ -8,6 +8,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Future;
 
+/**
+ * @author Frozen
+ */
 @Component
 @Slf4j
 public class AsyncSudokuGenerator {

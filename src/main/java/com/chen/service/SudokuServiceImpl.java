@@ -28,7 +28,6 @@ public class SudokuServiceImpl implements SudokuService{
                 futures.add(future);
             }
         }
-
         List<Sudoku> sudokus = futures.stream().map(sudokuFuture -> {
             try {
                 return sudokuFuture.get();

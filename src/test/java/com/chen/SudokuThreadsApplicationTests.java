@@ -9,11 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-import java.util.stream.Collectors;
 
 @SpringBootTest
 class SudokuThreadsApplicationTests {
@@ -33,8 +29,25 @@ class SudokuThreadsApplicationTests {
             int[][] finalResult = sudoku.getFinalResult();
             System.out.println("题目：");
             Sudoku.display(finalResult);
-            System.out.println("答案：");
-            Sudoku.display(result);
+        }
+    }
+
+    @Test
+    @SuppressWarnings("unchecked")
+    public void testSolveSudoku() {
+        int level = 4;
+        List<Sudoku> sudokus = (List<Sudoku>) sudokuService.generateSudokuByThreads(level).getData();
+        List<int[][]> solution = new ArrayList<>();
+        for (Sudoku each : sudokus) {
+            solution.add(each.getFinalResult());
+        }
+        List<int[][]> arrs = (List<int[][]>) sudokuService.solveSudokuByThreads(solution).getData();
+
+        for (int i = 0; i < solution.size(); i++) {
+            System.out.println("题目" + i);
+            Sudoku.display(sudokus.get(i).getFinalResult());
+            System.out.println("题解" + i);
+            Sudoku.display(arrs.get(i));
         }
     }
 
